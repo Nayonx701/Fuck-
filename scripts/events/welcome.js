@@ -29,7 +29,7 @@ module.exports = {
 			welcomeMessage: "𝙷𝙴𝚈 𝙶𝚄𝚈 𝐍𝐚𝐲𝐨𝐧 𝙲𝙾𝙽𝙽𝙴𝙲𝚃 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿\𝐍𝐚𝐲𝐨𝐧 𝙿𝚁𝙴𝙵𝙸𝚇: %1\n 𝙰𝙽𝙳 𝚃𝙽𝚇 𝙵𝙾𝚁 𝙰𝙳𝙳𝙴𝙳 𝐍𝐚𝐲𝐨𝐧 𝚃𝚈𝙿𝙴☞︎︎︎%1𝙷𝙴𝙻𝙿☞︎︎\n𝙱𝙾𝚃 𝙲𝚁𝙴𝙳𝙸𝚃 𝙱𝚈 𝐍𝐚𝐲𝐨𝐧 𖤍🂱",
 			multiple1: "𝚈𝙾𝚄",
 			multiple2: "𝚈𝙾𝚄 𝙶𝚄𝚈𝚂",
-			defaultWelcomeMessage: `𝙰𝚂𝚂𝙰𝙻𝙰𝙼𝚄𝚆𝙰𝙻𝙰𝙸𝙺𝚄𝙼 {userName} 𝙱𝚁𝙾𝚃𝙷𝙴𝚁  𝚆𝙴𝙻𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝐍𝐚𝐲𝐨𝐧\n𝚆𝙴𝙻𝙻𝙲𝙾𝙼𝙴  {multiple} 𝚃𝙾 𝚃𝙷𝙴 𝙲𝙷𝙰𝚃 𝙱𝙾𝚇: {boxName}\n𝙷𝙰𝚅𝙴 𝙰 𝙽𝙸𝙲𝙴  {session}🐼♲︎︎︎`
+			defaultWelcomeMessage: `😻𝘼𝙎𝙎𝘼𝙇𝘼𝙈𝙐 𝘼𝙇𝘼𝙄𝙆𝙐𝙈😻 {userName} 𝐍𝐚𝐲𝐨𝐧\n𝚆𝙴𝙻𝙻𝙲𝙾𝙼𝙴 𝙔𝙊𝙐 {multiple} 𝚃𝙾 𝚃𝙷𝙴 𝙲𝙷𝙰𝚃 𝙱𝙾𝚇: {boxName}\n𝙷𝙰𝚅𝙴 𝙰 𝙽𝙸𝙲𝙴  {session}🐼♲︎︎︎`
 		}
 	},
 
