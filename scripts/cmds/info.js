@@ -23,6 +23,7 @@ module.exports = {
 		const urls = [
 "https://i.imgur.com/h7UapF5.jpeg",
 "https://i.imgur.com/J49Gc1J.jpeg",
+"https://i.imgur.com/WWeIPJk.jpeg",			
 ];
 		const link = urls[Math.floor(Math.random() * urls.length)];
 		const now = moment().tz('Asia/Jakarta');
