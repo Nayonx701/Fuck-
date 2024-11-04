@@ -1,62 +1,53 @@
 const axios = require("axios");
-module.exports.config = {
-  name: "lyrics",
-  author: "A6y",
-  version: "1.0.0",
-  category: "song to text"
-}
-module.exports.onStart = async ({api,event,args}) => {
-  try {
-    const lyrics = args.join(" ")
-  if (!lyrics){
-    api.sendMessage("please put one lyrics name",event.threadID,event.messageID)
-  }
-  const response = await axios.get(`${global.GoatBot.config.api2}/lyrics2?songName=${lyrics}`)
-  const res = response.data
-  const ly = res.lyrics
-  const title = res.title
-  const image = res.image
-  const a6y = await axios.get({responseType: 'stream',url:image});
-  const a6 = a6y.data
-  api.sendMessage({body:`title:${title}\nlyrics:${lyrics}`,attachment:a6},event.threadID,event.messageID)
-  } catch (error) {
-api.sendMessage(`error: ${error.message}`,event.threadID,event.messageID);
-  }
-}
-/*const axios = require("axios");
 
-module.exports = {
+const baseApiUrl = async () => {
+  const base = await axios.get(
+    `https://raw.githubusercontent.com/Blankid018/D1PT0/main/baseApiUrl.json`,
+  );
+  return base.data.api;
+};
+
+(module.exports = {
   config: {
     name: "lyrics",
     version: "1.0",
-    author: "nazrul",
+    author: "Nazrul",
     countDown: 5,
     role: 0,
     description: {
       en: "Get song lyrics with their Images"
     },
-    category: "info",
+    category: "Song Lyrics",
     guide: {
       en: "{pn} <song name>"
     }
   },
 
-  onStart: async ({api, event ,args}) =>{
+  onStart: async ({ api, event, args }) => {
     try {
-      const lyrics = args.join(' ');
-      if (!lyrics) {
+      const Songs = args.join(' ');
+      if (!Songs) {
         return api.sendMessage("Please provide a song name!", event.threadID, event.messageID);
       }
-      const { data } = await axios.get(`${global.GoatBot.config.api2}/lyrics2?songName=${lyrics}`);
-      const messageData = {
-        body: `❏Title: ${data.title || ''}\n\n❏Artist: ${data.artist || ''}\n\n❏Lyrics:\n\n ${data.lyrics || ''}`,
-        attachment: await global.utils.getStreamFromURL(data.image)
+
+      const res = await axios.get(`${await baseApiUrl()}/lyrics2?songName=${encodeURIComponent(Songs)}`);
+      const data = res.data;
+      if (!data.title || !data.artist || !data.lyrics) {
+        return api.sendMessage("An error occurred while fetching lyrics!", event.threadID, event.messageID);
+      }
+
+      const songMessage = { 
+        body: `❏♡𝐒𝐨𝐧𝐠 𝐓𝐢𝐭𝐥𝐞: ${data.title}\n\n❏♡𝐀𝐫𝐭𝐢𝐬𝐭: ${data.artist}\n\n❏♡𝐒𝐨𝐧𝐠 𝐋𝐲𝐫𝐢𝐜𝐬:\n\n${data.lyrics}` 
       };
-      return api.sendMessage(messageData, event.threadID,event.messageID);
+      
+      if (data.image) {
+        const stream = await axios.get(data.image, { responseType: 'stream' });
+        songMessage.attachment = stream.data;
+      }
+
+      return api.sendMessage(songMessage, event.threadID, event.messageID);
     } catch (error) {
-      console.error(error);
-      return api.sendMessage(error.message, event.threadID, event.messageID);
+    api.sendMessage("error: " + error.message, event.threadID, event.messageID);
     }
   }
-};
-*/
+});
