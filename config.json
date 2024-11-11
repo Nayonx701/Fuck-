@@ -64,12 +64,6 @@
   "a6y": "",
   "authorName": "NAYON",
   "facebook2": "https://www.facebook.com/Nayonx234",
-  "API": {
-    "DIPTO": "https://www.noobs-api.000.pe/dipto",
-    "SAMIR": "https://www.samirxpikachu.run.place",
-    "ASIF": "https://nubs-apis.onrender.com",
-    "rubishapi": "https://rubish-apihub.onrender.com/rubish"
-  },
   "facebook": "https://www.facebook.com/Nayonx234",
   "email": "nayonbairagi09@gmail.com",
   "replit": "https://replit.com/@DAVID-RAJ",
@@ -180,7 +174,7 @@
     "updatePresence": true,
     "listenTyping": true,
     "logLevel": "error",
-    "selfListen": true,
+    "selfListen": false,
     "selfListenEvent": true,
     "autoMarkDelivery": true,
     "autoReconnect": true,
