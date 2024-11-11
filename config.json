@@ -67,7 +67,7 @@
     "DIPTO": "https://www.noobs-api.000.pe/dipto",
     "SAMIR": "https://www.samirxpikachu.run.place",
     "ASIF": "https://nubs-apis.onrender.com",
-    "rubishapi": "https://rubish-apihub.onrender.com/rubish"
+    "rubishapi": "https://rubish-apihub.onrender.com/rubish",
   },
   "facebook2": "https://www.facebook.com/Nayonx234",
   "facebook": "https://www.facebook.com/Nayonx234",
@@ -180,7 +180,7 @@
     "updatePresence": true,
     "listenTyping": true,
     "logLevel": "error",
-    "selfListen": false,
+    "selfListen": true,
     "selfListenEvent": true,
     "autoMarkDelivery": true,
     "autoReconnect": true,
